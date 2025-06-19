@@ -29,7 +29,7 @@ export function Header() {
         </Button>
 
         <div className="text-right">
-          <p className="text-sm font-medium text-white">{user?.name}</p>
+          <p className="text-sm font-medium text-white">{user?.username}</p>
           <p className="text-xs text-slate-400">
             {new Date().toLocaleString("en-US", {
               timeZone: "UTC",

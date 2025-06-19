@@ -51,7 +51,7 @@ export function Sidebar({ activeView, onViewChange }: SidebarProps) {
       <div className="p-4 border-b border-slate-700">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-slate-300">{user?.name}</span>
+            <span className="text-sm text-slate-300">{user?.username}</span>
             <Badge className={`text-xs ${getClearanceBadge(user?.clearance || "")}`}>
               {user?.clearance?.replace("_", " ").toUpperCase()}
             </Badge>
