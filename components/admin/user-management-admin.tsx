@@ -254,7 +254,7 @@ export function UserManagementAdmin() {
                 <SelectValue placeholder="All roles" />
               </SelectTrigger>
               <SelectContent className="bg-slate-700 border-slate-600">
-                <SelectItem value="" className="text-white">
+                <SelectItem value="all" className="text-white">
                   All roles
                 </SelectItem>
                 <SelectItem value="admin" className="text-white">

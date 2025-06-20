@@ -170,13 +170,13 @@ export function ReportsManagement() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-slate-700 border-slate-600">
-                      <SelectItem value="top_secret" className="text-white">
+                      <SelectItem key="top_secret" value="top_secret" className="text-white">
                         Top Secret
                       </SelectItem>
-                      <SelectItem value="secret" className="text-white">
+                      <SelectItem key="secret" value="secret" className="text-white">
                         Secret
                       </SelectItem>
-                      <SelectItem value="confidential" className="text-white">
+                      <SelectItem key="confidential" value="confidential" className="text-white">
                         Confidential
                       </SelectItem>
                     </SelectContent>
@@ -192,16 +192,16 @@ export function ReportsManagement() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-slate-700 border-slate-600">
-                      <SelectItem value="draft" className="text-white">
+                      <SelectItem key="draft" value="draft" className="text-white">
                         Draft
                       </SelectItem>
-                      <SelectItem value="pending" className="text-white">
+                      <SelectItem key="pending" value="pending" className="text-white">
                         Pending
                       </SelectItem>
-                      <SelectItem value="approved" className="text-white">
+                      <SelectItem key="approved" value="approved" className="text-white">
                         Approved
                       </SelectItem>
-                      <SelectItem value="classified" className="text-white">
+                      <SelectItem key="classified" value="classified" className="text-white">
                         Classified
                       </SelectItem>
                     </SelectContent>
@@ -245,19 +245,19 @@ export function ReportsManagement() {
                 <SelectValue placeholder="All statuses" />
               </SelectTrigger>
               <SelectContent className="bg-slate-700 border-slate-600">
-                <SelectItem value="all" className="text-white">
+                <SelectItem key="all" value="all" className="text-white">
                   All statuses
                 </SelectItem>
-                <SelectItem value="draft" className="text-white">
+                <SelectItem key="draft" value="draft" className="text-white">
                   Draft
                 </SelectItem>
-                <SelectItem value="pending" className="text-white">
+                <SelectItem key="pending" value="pending" className="text-white">
                   Pending
                 </SelectItem>
-                <SelectItem value="approved" className="text-white">
+                <SelectItem key="approved" value="approved" className="text-white">
                   Approved
                 </SelectItem>
-                <SelectItem value="classified" className="text-white">
+                <SelectItem key="classified" value="classified" className="text-white">
                   Classified
                 </SelectItem>
               </SelectContent>
@@ -271,16 +271,16 @@ export function ReportsManagement() {
                 <SelectValue placeholder="All classifications" />
               </SelectTrigger>
               <SelectContent className="bg-slate-700 border-slate-600">
-                <SelectItem value="all" className="text-white">
+                <SelectItem key="all" value="all" className="text-white">
                   All classifications
                 </SelectItem>
-                <SelectItem value="top_secret" className="text-white">
+                <SelectItem key="top_secret" value="top_secret" className="text-white">
                   Top Secret
                 </SelectItem>
-                <SelectItem value="secret" className="text-white">
+                <SelectItem key="secret" value="secret" className="text-white">
                   Secret
                 </SelectItem>
-                <SelectItem value="confidential" className="text-white">
+                <SelectItem key="confidential" value="confidential" className="text-white">
                   Confidential
                 </SelectItem>
               </SelectContent>
@@ -417,13 +417,13 @@ export function ReportsManagement() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-slate-700 border-slate-600">
-                      <SelectItem value="top_secret" className="text-white">
+                      <SelectItem key="top_secret" value="top_secret" className="text-white">
                         Top Secret
                       </SelectItem>
-                      <SelectItem value="secret" className="text-white">
+                      <SelectItem key="secret" value="secret" className="text-white">
                         Secret
                       </SelectItem>
-                      <SelectItem value="confidential" className="text-white">
+                      <SelectItem key="confidential" value="confidential" className="text-white">
                         Confidential
                       </SelectItem>
                     </SelectContent>
@@ -439,16 +439,16 @@ export function ReportsManagement() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-slate-700 border-slate-600">
-                      <SelectItem value="draft" className="text-white">
+                      <SelectItem key="draft" value="draft" className="text-white">
                         Draft
                       </SelectItem>
-                      <SelectItem value="pending" className="text-white">
+                      <SelectItem key="pending" value="pending" className="text-white">
                         Pending
                       </SelectItem>
-                      <SelectItem value="approved" className="text-white">
+                      <SelectItem key="approved" value="approved" className="text-white">
                         Approved
                       </SelectItem>
-                      <SelectItem value="classified" className="text-white">
+                      <SelectItem key="classified" value="classified" className="text-white">
                         Classified
                       </SelectItem>
                     </SelectContent>

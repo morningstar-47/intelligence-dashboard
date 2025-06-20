@@ -21,5 +21,5 @@ export default function HomePage() {
     return <LoginForm />
   }
 
-  return <DashboardLayout />
+  return (<DashboardLayout > </DashboardLayout>)
 }
