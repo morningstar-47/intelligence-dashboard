@@ -1,0 +1,50 @@
+name: Build Tauri App with pnpm
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform: [macos-latest, windows-latest]
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 🟣 Install pnpm manually
+        run: npm install -g pnpm
+
+      - name: ✅ Verify pnpm installation
+        run: pnpm --version
+
+      - name: 🦀 Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🛠️ Build frontend
+        run: pnpm build
+
+      - name: 🧱 Build Tauri app
+        run: pnpm tauri build
+
+      - name: 📤 Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tauri-${{ matrix.platform }}
+          path: src-tauri/target/release/bundle

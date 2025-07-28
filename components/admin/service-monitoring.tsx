@@ -17,6 +17,7 @@ export function ServiceMonitoring() {
       port: 8080,
       version: "v1.2.3",
       instances: 3,
+      database: "",
       loadBalancer: "Round Robin",
       endpoints: ["/health", "/auth/*", "/api/v1/*"],
       dependencies: ["Auth Service", "User Service", "Map Service", "AI Service", "Report Service"],

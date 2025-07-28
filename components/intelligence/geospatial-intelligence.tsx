@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Filter, Search, Layers, Satellite, Plus, Edit, Trash2 } from "lucide-react"
 import { MapFilters, useMapData } from "@/hooks/use-map-data"
-import { IntelligenceMap } from './map/IntelligenceMap'
+import dynamic from 'next/dynamic'
 import '@/styles/map.css'
 import {
   Dialog,
@@ -32,6 +32,8 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Label } from "@/components/ui/label"
+
+const IntelligenceMap = dynamic(() => import('./map/IntelligenceMap').then(mod => mod.IntelligenceMap), { ssr: false })
 
 export function GeospatialIntelligence() {
   const [filters, setFilters] = useState<MapFilters>({
@@ -380,7 +382,7 @@ export function GeospatialIntelligence() {
           <Card className="bg-slate-800 border-slate-700">
             <CardContent className="p-0">
               <IntelligenceMap
-                points={mapData}
+                points={mapData || []}
                 getClassificationColor={getClassificationColor}
                 isLoading={isLoading}
               />

@@ -72,7 +72,7 @@ export function UserManagement() {
         username: "",
         email: "",
         full_name: "",
-        role: "analyst",
+        role: "",
         clearance: "confidential",
       })
     } catch (error) {
@@ -350,7 +350,7 @@ export function UserManagement() {
                 <Input
                   id="edit-name"
                   value={editingUser.name}
-                  onChange={(e) => setEditingUser({ ...editingUser, name: e.target.value })}
+                  onChange={(e) => setEditingUser({ ...editingUser, name: e.target.value })} 
                   className="bg-slate-700 border-slate-600 text-white"
                 />
               </div>
